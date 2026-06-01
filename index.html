@@ -3,127 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samy.io WhatsApp Pairing</title>
+<title>Samy_Ghost</title>
 
 <style>
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
     background:#0d1117;
     color:white;
-    font-family:Arial,sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
 }
 
-.container{
-    width:90%;
-    max-width:400px;
-    background:#161b22;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 0 20px rgba(0,0,0,.3);
-}
-
-h1{
+header{
     text-align:center;
+    padding:40px 20px;
+    background:#161b22;
+}
+
+header h1{
+    font-size:40px;
+    color:#25D366;
+}
+
+header p{
+    margin-top:10px;
+    color:#ccc;
+}
+
+section{
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.card{
+    background:#161b22;
+    padding:20px;
+    border-radius:15px;
     margin-bottom:20px;
 }
 
-input{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:10px;
+h2{
+    color:#25D366;
     margin-bottom:15px;
-    font-size:16px;
-    box-sizing:border-box;
 }
 
-button{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    background:#25D366;
-    color:white;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
+ul{
+    padding-left:20px;
 }
 
-button:hover{
-    opacity:.9;
+li{
+    margin:10px 0;
 }
 
-#result{
-    margin-top:20px;
-    text-align:center;
+.contact{
     font-size:18px;
-    word-break:break-word;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#888;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>Samy.io</h1>
+<header>
+    <h1>👻 Samy_Ghost</h1>
+    <p>Développeur Web • Node.js • Railway • WhatsApp Bots</p>
+</header>
 
-    <input
-        id="number"
-        type="text"
-        placeholder="237XXXXXXXXX">
+<section>
 
-    <button onclick="generate()">
-        Générer le code
-    </button>
+    <div class="card">
+        <h2>📞 Contact du Owner</h2>
+        <p class="contact">
+            WhatsApp : +237 621 479 037
+        </p>
+    </div>
 
-    <div id="result"></div>
-</div>
+    <div class="card">
+        <h2>⚡ Fonctionnalités</h2>
+        <ul>
+            <li>Création de projets web</li>
+            <li>Développement Node.js</li>
+            <li>Hébergement Railway</li>
+            <li>Automatisation et bots</li>
+            <li>Interfaces modernes</li>
+            <li>Support technique</li>
+        </ul>
+    </div>
 
-<script>
-async function generate() {
+    <div class="card">
+        <h2>ℹ️ À propos</h2>
+        <p>
+            Bienvenue sur Samy_Ghost.
+            Cette plateforme est dédiée au développement,
+            à l'automatisation et aux solutions numériques modernes.
+        </p>
+    </div>
 
-    const number =
-        document.getElementById("number").value;
+</section>
 
-    const result =
-        document.getElementById("result");
-
-    if(!number){
-        result.innerHTML = "Entrez un numéro.";
-        return;
-    }
-
-    result.innerHTML = "Traitement...";
-
-    try{
-
-        const response = await fetch("/pair",{
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify({number})
-        });
-
-        const data = await response.json();
-
-        result.innerHTML =
-            data.message ||
-            data.code ||
-            "Réponse reçue";
-
-    }catch(err){
-
-        result.innerHTML =
-            "Erreur de connexion au serveur.";
-
-    }
-}
-</script>
+<footer>
+    © 2026 Samy_Ghost - Tous droits réservés
+</footer>
 
 </body>
 </html>
