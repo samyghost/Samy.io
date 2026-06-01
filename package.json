@@ -1,11 +1,14 @@
 {
-  "name": "samy",
+  "name": "samyio",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "@whiskeysockets/baileys": "latest",
+    "express": "^4.21.2",
+    "pino": "^9.0.0",
+    "fs-extra": "^11.2.0"
   }
 }
