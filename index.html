@@ -1,21 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Samy.io Pairing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samy.io WhatsApp Pairing</title>
+
+<style>
+body{
+    margin:0;
+    background:#0d1117;
+    color:white;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:90%;
+    max-width:400px;
+    background:#161b22;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin-bottom:15px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#25D366;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+#result{
+    margin-top:20px;
+    text-align:center;
+    font-size:18px;
+    word-break:break-word;
+}
+</style>
 </head>
+
 <body>
-    <h1>WhatsApp Pairing</h1>
 
-    <input id="number" placeholder="237XXXXXXXXX">
-    <button onclick="generate()">Générer</button>
+<div class="container">
+    <h1>Samy.io</h1>
 
-    <p id="result"></p>
+    <input
+        id="number"
+        type="text"
+        placeholder="237XXXXXXXXX">
 
-    <script>
-        async function generate() {
-            document.getElementById("result").innerText =
-                "Génération du code...";
-        }
-    </script>
+    <button onclick="generate()">
+        Générer le code
+    </button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+async function generate() {
+
+    const number =
+        document.getElementById("number").value;
+
+    const result =
+        document.getElementById("result");
+
+    if(!number){
+        result.innerHTML = "Entrez un numéro.";
+        return;
+    }
+
+    result.innerHTML = "Traitement...";
+
+    try{
+
+        const response = await fetch("/pair",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({number})
+        });
+
+        const data = await response.json();
+
+        result.innerHTML =
+            data.message ||
+            data.code ||
+            "Réponse reçue";
+
+    }catch(err){
+
+        result.innerHTML =
+            "Erreur de connexion au serveur.";
+
+    }
+}
+</script>
+
 </body>
 </html>
