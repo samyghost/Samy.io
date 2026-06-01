@@ -8,7 +8,7 @@
   "dependencies": {
     "@whiskeysockets/baileys": "latest",
     "express": "^4.21.2",
-    "pino": "^9.0.0",
-    "fs-extra": "^11.2.0"
+    "fs-extra": "^11.2.0",
+    "pino": "^9.0.0"
   }
 }
