@@ -6,6 +6,9 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "@whiskeysockets/baileys": "latest",
+    "express": "^4.21.2",
+    "fs-extra": "^11.2.0",
+    "pino": "^9.0.0"
   }
 }
