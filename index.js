@@ -1,3 +1,4 @@
+const makeWASocket = require("@whiskeysockets/baileys");
 const express = require("express");
 const path = require("path");
 
