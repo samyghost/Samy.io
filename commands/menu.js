@@ -17,92 +17,84 @@ export default {
     const prefix = bot?.config?.prefix || ".";
 
     const menuText = `
-┌─────────────────────────────┐
-│         *MR.SAMY BOT*         │
-└─────────────────────────────┘
+╔══════════════════════╗
+║      🤖 MR.SAMY BOT 🤖      ║
+╚══════════════════════╝
 
-*Utilisateur* : ${userName}
-*Chat*        : ${chatType}
-*Préfixe*     : ${prefix}
+👤 Utilisateur : ${userName}
+💬 Chat : ${chatType}
+⚡ Préfixe : ${prefix}
 
-┌─────────────── GESTION DE GROUPE ───────────────┐
-│ add
-│ demote
-│ demoteall
-│ desc
-│ gpp
-│ infosgroups
-│ invite
-│ kick
-│ kickall
-│ left
-│ link
-│ manga
-│ mute
-│ online
-│ promote
-│ promoteall
-│ purge
-│ resetlink
-│ unmute
-└───────────────────────────────────────────────┘
+━━━━━━━━━━━━━━━━━━━━━━
+👥 GESTION DE GROUPE
+━━━━━━━━━━━━━━━━━━━━━━
+➜ add
+➜ kick
+➜ promote
+➜ demote
+➜ invite
+➜ link
+➜ mute
+➜ unmute
+➜ resetlink
+➜ purge
 
-┌─────────────── TÉLÉCHARGEMENTS ───────────────┐
-│ apk
-│ down-url
-│ img
-│ save
-│ telegram-sticker
-│ tiktok
-│ toaudio
-│ url
-│ vv
-└───────────────────────────────────────────────┘
+━━━━━━━━━━━━━━━━━━━━━━
+📥 TÉLÉCHARGEMENTS
+━━━━━━━━━━━━━━━━━━━━━━
+➜ apk
+➜ tiktok
+➜ img
+➜ save
+➜ telegram-sticker
+➜ toaudio
+➜ url
+➜ vv
 
-┌─────────────── UTILITAIRES ───────────────┐
-│ ai
-│ news
-│ weather
-│ checkban
-│ country
-│ delete
-│ device
-│ dico
-│ infos
-│ meteo
-│ ping
-│ owner
-└───────────────────────────────────────────────┘
+━━━━━━━━━━━━━━━━━━━━━━
+🛠️ UTILITAIRES
+━━━━━━━━━━━━━━━━━━━━━━
+➜ ai
+➜ news
+➜ weather
+➜ dico
+➜ infos
+➜ ping
+➜ owner
 
-┌─────────────── MODÉRATION ───────────────┐
-│ block
-│ unblock
-│ autorecording
-│ autotyping
-│ autoread
-│ autoreact
-│ welcome
-│ bye
-└───────────────────────────────────────────────┘
+━━━━━━━━━━━━━━━━━━━━━━
+🛡️ MODÉRATION
+━━━━━━━━━━━━━━━━━━━━━━
+➜ block
+➜ unblock
+➜ autoread
+➜ autotyping
+➜ autorecording
+➜ autoreact
+➜ welcome
+➜ bye
 
-┌─────────────── MEDIA ───────────────┐
-│ photo
-│ setpp
-│ take
-│ pp
-│ sticker
-└───────────────────────────────────────────────┘
+━━━━━━━━━━━━━━━━━━━━━━
+🖼️ MÉDIA
+━━━━━━━━━━━━━━━━━━━━━━
+➜ photo
+➜ sticker
+➜ pp
+➜ setpp
+➜ take
 
-┌─────────────── TAGS ───────────────┐
-│ principal
-│ tag
-│ tagadmin
-│ tagall
-└───────────────────────────────────────────────┘
+━━━━━━━━━━━━━━━━━━━━━━
+📢 TAGS
+━━━━━━━━━━━━━━━━━━━━━━
+➜ principal
+➜ tag
+➜ tagadmin
+➜ tagall
 
-┌─────────────────────────────┐
-│   *Développé par MR._SAMY TOUT MIGNON *     │
-└─────────────────────────────┘
+╔══════════════════════╗
+║   ✨ MR.SAMY OFFICIAL ✨   ║
+║      🚀 Powered By Samy      ║
+╚══════════════════════╝
 `;
 
     try {
