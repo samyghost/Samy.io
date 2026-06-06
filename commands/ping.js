@@ -7,7 +7,7 @@ export default {
     
     try {
       const start = Date.now();
-      await reply("🏓 𝚃𝚎𝚜𝚝𝚒𝚗𝚐...");
+      await reply("i'm sad...🙂");
       const latency = Date.now() - start;
       
       let indicator;
